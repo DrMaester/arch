@@ -1,5 +1,4 @@
 # Installation part Two
-
 # set hostname
 echo Lancelot > /etc/hostname
 
@@ -21,13 +20,6 @@ ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 echo "<ip-address>  <hostname.domain.org>   <hostname>
 127.0.0.1   localhost.localdomain   localhost
 ::1     localhost.localdomain   localhost" >> /etc/hosts
-
-# edit pacman
-vim /etc/pacman.conf
-  # include multilib for wine later
-
-# sync databases
-pacman -Sy
 
 # Possible to have encrypted root filesystem
 # Create an initial ramdisk environment

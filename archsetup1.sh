@@ -42,8 +42,15 @@ genfstab -p /mnt > /mnt/etc/fstab
 # change root to /mnt
 arch-chroot /mnt
 
+# edit pacman
+vim /etc/pacman.conf
+  # include multilib for wine later
+
+# sync databases
+pacman -Sy
+
 # install and configure GRUB
-pacman -S grub os-prober
+pacman -S grub os-prober git
 grub-install --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
