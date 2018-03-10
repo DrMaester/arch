@@ -35,5 +35,3 @@ mkinitcpio -p linux
 
 # change root password
 passwd
-
-pacman -S grub bash-completion dialog wpa_supplicant network-manager nmtui zsh
